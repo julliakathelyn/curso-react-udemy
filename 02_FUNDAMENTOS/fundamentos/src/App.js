@@ -1,6 +1,7 @@
 // exemplo de comentario em JSX
 import './App.css';
 import FirstComponent from './components/FirstComponent';
+import TemplateExpressions from './components/TemplateExpressions';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
        <p>É padrão que os elementos sejam envolvidos por uma div</p>
        <p>Não podemos usar apenas class, devemos usar className isso vai dar erro no console</p>
 
-      
+      <TemplateExpressions />
     </div>
   );
 }
