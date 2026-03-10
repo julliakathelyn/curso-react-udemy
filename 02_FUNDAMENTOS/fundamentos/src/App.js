@@ -2,6 +2,9 @@
 import './App.css';
 import FirstComponent from './components/FirstComponent';
 import TemplateExpressions from './components/TemplateExpressions';
+import MyComponent from './components/MyComponent';
+
+import Events from './components/Events';
 
 function App() {
   return (
@@ -14,8 +17,9 @@ function App() {
        <FirstComponent />
        <p>É padrão que os elementos sejam envolvidos por uma div</p>
        <p>Não podemos usar apenas class, devemos usar className isso vai dar erro no console</p>
-
       <TemplateExpressions />
+      <MyComponent />
+      <Events />
     </div>
   );
 }
