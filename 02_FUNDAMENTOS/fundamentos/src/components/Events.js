@@ -4,6 +4,15 @@ const Events = () => {
         console.log(e);
         console.log('O e dentro dos parenteses vai informar no console informações ');
     }
+
+    const renderSomething = (x) => {
+        if (x) {
+            return <h1>Renderizando isso</h1>
+        }   else {
+            return <h1>Tambem posso renderizar isso </h1>
+        }
+    };
+
     return (
         <div>
             <div>
@@ -18,8 +27,13 @@ const Events = () => {
                 }}
                 >Clique aqui por favor </button>
             </div>
+            {renderSomething(true)}
+            {renderSomething(false)}
         </div>
     );
+
+    
+
 };
 
 export default Events;
