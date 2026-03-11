@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import City from './assets/city.jpg'
+import ManageData from './components/ManageData';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <img src={City} alt="" />
       </div>
 
+      <ManageData />
     </div>
   );
 }
