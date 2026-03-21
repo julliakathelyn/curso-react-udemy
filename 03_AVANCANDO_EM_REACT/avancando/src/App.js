@@ -6,6 +6,8 @@ import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import { useState } from 'react';
 import CardDetails from './components/CardDetails';
+import Fragment from './components/Fragment';
+import Container from './components/Container';
 
 function App() {
 
@@ -53,6 +55,14 @@ function App() {
       newCar={car.newCar}
       />
       ))}
+
+      <Fragment  />
+ 
+      {/* children*/}
+      <Container myValue="testando">
+        <p>este e o conteudo</p>
+      </Container>
+
 
     </div>
   );
