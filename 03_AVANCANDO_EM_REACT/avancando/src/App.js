@@ -12,6 +12,13 @@ function App() {
   const name = "Joaquim"
   const [userName] = useState("Maria")
 
+
+  const cars = [
+    { id: 1, brand: "FerrariLindo", color: "Amarelo", km: 0, newCar: true },
+    { id: 2, brand: "RenaultLindo", color: "Branco", km: 50000, newCar: false },
+    { id: 3, brand: "FiatLindo", color: "Vermelho", km: 100000, newCar: false }
+  ];
+
   return (
     <div className="App">
       <h1>Desafio 3</h1>
@@ -36,6 +43,17 @@ function App() {
 
       <CardDetails brand="BMW" km={100000} color="Azul" newCar={false}/>
       <CardDetails brand="Audi" km={0} color="Preto" newCar={true} />
+
+      {/* Looop array de objs*/}
+      {cars.map((car) => (
+      <CardDetails 
+      branc={car.brand} 
+      color={car.brand} 
+      km={car.km} 
+      newCar={car.newCar}
+      />
+      ))}
+
     </div>
   );
 }
