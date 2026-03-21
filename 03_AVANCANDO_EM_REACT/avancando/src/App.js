@@ -9,6 +9,9 @@ import CardDetails from './components/CardDetails';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails';
 
 function App() {
 
@@ -24,6 +27,11 @@ function App() {
 
   function showMessage(){
     console.log("evento componente pai")
+  }
+
+  const [message, setMessage] = useState("")
+  const handleMessage = (msg) =>{
+    setMessage(msg)
   }
 
   return (
@@ -70,7 +78,19 @@ function App() {
       </Container>
 
       <ExecuteFunction myFunction={showMessage}/>
+      {/*state lift */}
+      <Message msg={message}/>
+      <ChangeMessageState handleMessage={handleMessage}/>
 
+      {pessoas.map(pessoa) => (
+          <UserDetails 
+      key={pessoa.id}    
+      nome={pessoa.name}
+      idade={pessoa.idade}
+      profissao={pessoa.profissao}
+      />
+      )}
+    
 
     </div>
   );
