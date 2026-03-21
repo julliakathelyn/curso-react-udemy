@@ -8,6 +8,7 @@ import { useState } from 'react';
 import CardDetails from './components/CardDetails';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
     { id: 2, brand: "RenaultLindo", color: "Branco", km: 50000, newCar: false },
     { id: 3, brand: "FiatLindo", color: "Vermelho", km: 100000, newCar: false }
   ];
+
+  function showMessage(){
+    console.log("evento componente pai")
+  }
 
   return (
     <div className="App">
@@ -49,6 +54,7 @@ function App() {
       {/* Looop array de objs*/}
       {cars.map((car) => (
       <CardDetails 
+      key={car.id}
       branc={car.brand} 
       color={car.brand} 
       km={car.km} 
@@ -62,6 +68,8 @@ function App() {
       <Container myValue="testando">
         <p>este e o conteudo</p>
       </Container>
+
+      <ExecuteFunction myFunction={showMessage}/>
 
 
     </div>
