@@ -34,6 +34,12 @@ function App() {
     setMessage(msg)
   }
 
+  const pessoas = [
+    { id: 1, nome: "Jullia", idade: 17, profissao: "programadora"},
+    { id: 2, nome: "Maria", idade: 27, profissao: "product owner"},
+    { id: 3, nome: "Lucas", idade: 26, profissao: "frontend"}
+  ]
+
   return (
     <div className="App">
       <h1>Desafio 3</h1>
@@ -82,14 +88,14 @@ function App() {
       <Message msg={message}/>
       <ChangeMessageState handleMessage={handleMessage}/>
 
-      {pessoas.map(pessoa) => (
-          <UserDetails 
+      {pessoas.map((pessoa) => (
+      <UserDetails 
       key={pessoa.id}    
-      nome={pessoa.name}
+      nome={pessoa.nome}
       idade={pessoa.idade}
       profissao={pessoa.profissao}
       />
-      )}
+      ))}
     
 
     </div>
