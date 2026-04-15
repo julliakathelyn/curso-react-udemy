@@ -10,3 +10,17 @@ h1 {
   text-align: center;
   margin-top: 50px;
 }
+
+.red-title{
+  background-color: black;
+  color: red;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.title{
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+}
