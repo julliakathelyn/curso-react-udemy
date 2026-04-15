@@ -1,0 +1,12 @@
+.car_title{
+    color : white;
+    background-color: black;
+    padding: 10px;
+}
+
+.car_details{
+    color : black;
+    background-color: lightgray;
+    padding: 10px;
+    cursor: pointer;
+}

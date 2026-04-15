@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+  color: #9b0303;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.red-title{
+  background-color: black;
+  color: red;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.title{
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+}
