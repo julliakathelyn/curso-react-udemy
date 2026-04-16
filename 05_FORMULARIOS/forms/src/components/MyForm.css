@@ -1,0 +1,12 @@
+form {
+    width: 500px;
+    margin: 0;
+    text-align: left;
+    padding-left: 50px;
+}
+
+input,textarea, select {
+    display: block;
+    margin-top: 10px;
+    
+}
