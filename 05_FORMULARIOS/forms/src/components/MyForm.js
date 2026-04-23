@@ -8,8 +8,7 @@ const MyForm = ({ user }) => {
 
     const handleName = (e) => {
         console.log(e.target.value)
-        console.log(name)
-        console.log(email)
+        
     }
 
 
@@ -17,14 +16,16 @@ const MyForm = ({ user }) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log('Enviando o formulário')
+        console.log(name, email, bio)
 
 
-        {/* 7 limoando form */ }
+        {/* 7 limpando form */ }
         setName('');
         setEmail('');
+        setBio('');
     };
 
-
+    const [bio, setBio] = useState('')
 
     return (
         <div>
@@ -55,6 +56,15 @@ const MyForm = ({ user }) => {
                     />
                 </label>
                 {/* 8 textarea */}
+                <label>
+                    <span>Mensagem:</span>
+                    <textarea
+                        name="message"
+                        placeholder="Digite sua mensagem"
+                        onChange={(e) => setBio(e.target.value)}
+                        value={bio}
+                    ></textarea>
+                </label>
                 <input type="submit" value="Enviar" />
 
             </form>
